@@ -1,0 +1,32 @@
+{
+  "name": "ecommerceclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
+	"dist":"set WEBPACK_ENV=online && webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoujiahao123/eCommerceClent.git"
+  },
+  "author": "jacob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhoujiahao123/eCommerceClent/issues"
+  },
+  "homepage": "https://github.com/zhoujiahao123/eCommerceClent#readme",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^1.15.0",
+    "webpack-dev-server": "^1.16.5"
+  },
+  "dependencies": {}
+}

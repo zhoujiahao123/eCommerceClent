@@ -1,0 +1,29 @@
+/* 通用头部导航 */
+.header .logo{
+	position: absolute;
+	display: block;
+	font-size: 36px;
+	color: #c60023;
+	left:50px;
+	top: 30px;
+	font-weight: bold;
+}
+.header .search-con{
+	/* padding的作用是撑起来,即内部元素位置改变 */
+	padding: 40px 0 30px 250px;
+}
+.header .search-con .search-input{
+	width: 550px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 15px;
+	border: 2px solid #c60023;
+	outline: none;
+}
+.header .search-con .search-btn{
+	/* 会以上一个元素的末尾作为起始位置 */
+	position: absolute;
+	height: 44px;
+	width: 80px;
+}

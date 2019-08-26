@@ -1,0 +1,94 @@
+/* 匹配所有元素 */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f6f6f6;
+	/* 行间距1.5倍 字体tahoma,arial,"microsoft yahei sans-serif字体从前往后匹配 */
+	font: 12px/1.5 tahoma, arial, "microsoft yahei", sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	border: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	cursor: pointer;
+}
+
+/* 定宽布局 */
+.w {
+	width: 1080px;
+	margin: 0 auto;
+	position: relative;
+	/* 超出边界不显示并清除浮动(即外容器会被里面元素撑起) */
+	overflow: hidden;
+}
+
+/* 全局通用样式 */
+/* 隐藏 */
+.hide {
+	display: none;
+}
+
+/* 超链接 */
+.link {
+	color: #999;
+	/* 手图标 */
+	cursor: pointer;
+	text-decoration: none;
+}
+.link:hover{
+	color: #e80012;
+}
+.link-text{
+	color: #999;
+	text-decoration: none;
+}
+/* btn */
+.btn{
+	/* 若不进行转化,则无法设置高度等,将对象呈递为内联对象（可有内联对象在同一行），但对象的内容呈递为块对象*/
+	display: inline-block;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	border: none;
+	background: #c60023;
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+.btn-mini{
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	padding: 0 10px;
+}
+/* 加载loading */
+.loading{
+	/* 作为块级元素,可有大小 */
+	display: block;
+	/* auto会居中 */
+	margin: 10px auto;
+	width: 100px;
+	height: 100px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background: url(../../image/boy.jpg) no-repeat;
+	opacity: .6;
+}

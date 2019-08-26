@@ -12,7 +12,6 @@ var _mm = {
 			dataType: param.type || 'json',
 			data: param.data || '',
 			success: function(res) {
-
 				if (0 === res.status) {
 					//请求成功
 					typeof param.success === 'function' && param.success(res.data, res.msg);
@@ -44,11 +43,38 @@ var _mm = {
 		var template = Hogan.compile(htmlTemplate),
 	    result = template.render(data);
 		return result;
-	}
-	,
+	},
+	//成功提示
+	successTips:function(msg){
+		alert(msg||'操作成功！');
+	},
+	//失败提示
+	errorTips:function(msg){
+		alert(msg||'somethingWrong');
+	},
+	//字段的验证，支持非空、手机、邮箱的判断
+	validate:function(value,type){
+		var value = $.trim(value);
+		//非空验证
+		if('require' === type){
+			return !!value;
+		}
+		//手机号验证，采用正则表达式形式
+		if('phone' === type){
+			return /^1\d{10}$/.test(value);
+		}
+		//邮箱验证
+		if('email' === type){
+			return /[\w.]+@\w+\.(com|net|edu)/.test(value);
+		}
+	},
 	//统一登录处理
 	doLogin: function() {
 		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+	},
+	goHome:function(){
+		window.location.href = './index.html';
 	}
+	
 };
 module.exports = _mm;

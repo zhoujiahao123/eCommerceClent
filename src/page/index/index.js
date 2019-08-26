@@ -1,9 +1,9 @@
 
-
+require('page/common/header/index.js');
+require('page/common/nav/index.js');
+var navSide = require('page/common/nav-side/index.js');
 var _mm = require('util/mm.js');
 
-var html = '<div>{{data}}<div>';
-var data = {
-	data:'test'
-}
-console.log(_mm.renderHtml(html,data));
+navSide.init({
+	name:'pass-update'
+});
